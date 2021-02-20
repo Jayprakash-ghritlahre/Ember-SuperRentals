@@ -1,0 +1,31 @@
+<!-- {{yield}} -->
+
+<!-- <div class="image">
+  <img ...attributes>
+</div> -->
+
+<!-- {{#if this.isLarge}}
+  <div class="image large"> 
+  	<button type="button" class="image large" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    <small>View Smaller</small> -->
+  <!-- </div> -->
+   <!--  </button>
+{{else}} -->
+  <!-- <div class="image"> -->
+  	<!-- <button type="button" class="image" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    <small>View Larger</small> -->
+  <!-- </div> -->
+  <!-- </button>
+{{/if}} --> 
+
+<!-- removing duplication -->
+<button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
+  <img ...attributes>
+  {{#if this.isLarge}}
+  	<small>View Smaller</small>
+  {{else}}
+    <small>View Larger</small>
+  {{/if}}
+</button>

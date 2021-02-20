@@ -1,0 +1,39 @@
+<!-- <NavBar /> -->
+<Jumbo>
+    {{!-- <div class="jumbo">
+        <div class="right tomster"> </div> --}}
+        <h2>Welcome to Super Rentals!</h2>
+        <p>We hope you find exactly what you're looking for in a place to stay.</p>
+
+        {{!-- <a href="youtube.com" class="button">youtube</a> --}}        
+        <LinkTo @route="about" class="button">About Us</LinkTo>
+        <a href="/getting-in-touch" class="button">Contact Us</a>
+
+
+        <p>Uses of navigation(nav) in html and check it</p>
+        <nav>            
+            <LinkTo @route="about" class="button">About Us</LinkTo>
+            <LinkTo @route="contact" class="button">contact Us</LinkTo>               
+            {{!-- <a href="/getting-in-touch" class="button">Contact Us</a> --}}
+        </nav>
+
+    {{!-- </div> --}}
+</Jumbo>
+
+<!-- <h1>{{@model.title}}</h1> -->
+
+<div class="rentals">
+  <ul class="results">
+    {{#each @model as |property|}}
+      <li><Rental @rental={{property}} /></li>
+    {{/each}}
+
+    <!-- <li><Rental @rental={{@model}} /></li>
+    <li><Rental @rental={{@model}} /></li>
+    <li><Rental @rental={{@model}} /></li> -->
+
+    <!-- <li><Rental /></li>
+    <li><Rental /></li>
+    <li><Rental /></li> -->      
+  </ul>
+</div>
